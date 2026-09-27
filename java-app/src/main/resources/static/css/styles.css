@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f4f7fb;
+    --panel: #ffffff;
+    --secondary: #edf3ff;
+    --primary: #4f6ef7;
+    --primary-dark: #3753d9;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body {
+    min-height: 100vh;
+}
+
+button, input, a {
+    font: inherit;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+}
+
+.secondary-btn {
+    background: var(--secondary);
+    color: var(--text);
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+}
+
+.auth-page {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef4ff, #f5f7fb);
+    padding: 1rem;
+}
+
+.auth-card {
+    width: min(420px, 100%);
+    background: white;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    border: 1px solid var(--border);
+}
+
+.auth-card h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.auth-card label {
+    font-weight: 600;
+}
+
+.auth-card input {
+    width: 100%;
+    padding: 0.85rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+}
+
+.auth-card button {
+    margin-top: 0.5rem;
+    padding: 0.9rem;
+    font-size: 1rem;
+    background: var(--primary);
+    color: white;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #111827;
+    color: white;
+    padding: 1.5rem 1rem;
+}
+
+.brand {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.main {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.eyebrow {
+    margin: 0 0 0.25rem 0;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.08rem;
+    color: var(--muted);
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 1.9rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 1rem;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+.wide-panel {
+    grid-column: 1 / -1;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.panel-header h3 {
+    margin: 0;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.item-card {
+    background: #f9fafb;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.8rem 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.item-card h4 {
+    margin: 0 0 0.3rem 0;
+}
+
+.item-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+}
+
+.agenda-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.agenda-list li {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.agenda-list span {
+    min-width: 60px;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(50px, 1fr));
+    gap: 0.5rem;
+}
+
+.calendar-head {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.calendar-day {
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    border-radius: 10px;
+    min-height: 70px;
+    padding: 0.4rem;
+    position: relative;
+}
+
+.calendar-day.highlight {
+    background: var(--secondary);
+    border-color: var(--primary);
+}
+
+.dot {
+    position: absolute;
+    right: 0.45rem;
+    bottom: 0.45rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-height: 180px;
+}
+
+.bubble {
+    background: #eef2ff;
+    border-radius: 12px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.bubble strong {
+    font-size: 0.8rem;
+}
+
+.item-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding: 0.9rem;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-card {
+        flex-direction: column;
+    }
+
+    .meta {
+        align-items: flex-start;
+    }
+
+    .sidebar nav {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-head {
+        font-size: 0.7rem;
+    }
+
+    .calendar-day {
+        min-height: 48px;
+        font-size: 0.75rem;
+    }
+}

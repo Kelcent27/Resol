@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resol Login</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body class="auth-page">
+    <div class="auth-card">
+        <h1>Resol</h1>
+        <p class="subtitle">Plan, remember, and focus.</p>
+
+        <form method="post" th:action="@{/login}">
+            <label>Email</label>
+            <input type="email" name="username" value="alex@resol.app" required>
+
+            <label>Password</label>
+            <input type="password" name="password" value="password123" required>
+
+            <button type="submit">Log in</button>
+        </form>
+    </div>
+</body>
+</html>
